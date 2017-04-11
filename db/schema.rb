@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 1) do
 
   create_table "animals", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "habitat"
@@ -33,13 +33,16 @@ ActiveRecord::Schema.define(version: 0) do
     t.bigint "animal"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["animal"], name: "fk_rails_e1b8458c39"
   end
 
   create_table "tags", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer "type"
+    t.integer "typ"
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["name", "typ"], name: "index_tags_on_name_and_typ"
   end
 
+  add_foreign_key "images", "animals", column: "animal"
 end

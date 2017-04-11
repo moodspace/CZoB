@@ -1,3 +1,5 @@
+public/uploads/*.png
+
 *.rbc
 capybara-*.html
 .rspec

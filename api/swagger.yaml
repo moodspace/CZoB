@@ -173,7 +173,7 @@ paths:
       description: "Returns information about tags."
       operationId: "tagsGET"
       parameters:
-      - name: "type"
+      - name: "typ"
         in: "query"
         description: "Type of tags, e.g. habitat, food"
         required: true
@@ -232,7 +232,7 @@ definitions:
         type: "integer"
         format: "int32"
         description: "ID of a tag"
-      type:
+      typ:
         type: "integer"
         format: "int32"
         description: "Type of tag"

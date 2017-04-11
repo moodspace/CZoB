@@ -1,0 +1,90 @@
+<script>
+    const habitat = '<%= @habitat %>';
+    const food = '<%= @food %>';
+    const id = <%= @id %>;
+</script>
+
+<div class="container">
+
+    <h1>Welcome to the Zoo</h1>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <label for="habitat-select">Habitat</label>
+            <select class="form-control" id="habitat-select"></select>
+        </div>
+        <div class="col-sm-6">
+            <label for="habitat-select">Food</label>
+            <select class="form-control" id="food-select"></select>
+        </div>
+    </div>
+
+    <br/>
+
+    <div id="gallery" class="row"></div>
+
+    <button type="button" id="btn-upload" class="btn btn-default btn-lg">
+        <span class="glyphicon glyphicon-upload" aria-hidden="true"></span>
+        Upload
+    </button>
+
+</div>
+
+<div id="modal-new-image" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Upload an image</h4>
+            </div>
+            <div class="modal-body">
+                <%= form_tag('javascript:void(0)', multipart: true) do %>
+                <%= file_field_tag 'new_image' %>
+                <%= hidden_field_tag(:new_animal_name) %>
+                <%= hidden_field_tag(:new_animal_habitat) %>
+                <%= hidden_field_tag(:new_animal_food) %>
+                <%= hidden_field_tag(:new_animal_description) %>
+                <% end %>
+
+                <label for="name">Name</label>
+                <div class="input-group">
+                    <input name="name" class="form-control" type="text" maxlength="255">
+                </div>
+                <label for="habitat">Habitat</label>
+                <div class="input-group">
+                    <input name="habitat" class="form-control" type="text" maxlength="255">
+                </div>
+                <label for="food">Food</label>
+                <div class="input-group">
+                    <input name="food" class="form-control" type="text" maxlength="255">
+                </div>
+                <label for="description">Description</label>
+                <div class="input-group">
+                    <input name="description" class="form-control" type="text" maxlength="255">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" id="btn-commit-upload" class="btn btn-primary">Upload</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal-view-image" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 id="animal-name"></h4>
+            </div>
+            <div class="modal-body">
+                <p id="animal-habitat">Habitat</p>
+                <p id="animal-food">Food</p>
+                <p id="animal-description">Description</p>
+                <img style="width: 100%;" />
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

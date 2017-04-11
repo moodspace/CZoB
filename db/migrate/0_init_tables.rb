@@ -42,7 +42,7 @@ class InitTables < ActiveRecord::Migration[5.0]
 
     create_table "tag".pluralize.to_sym, id: false do |t|
       t.bigint :id
-      t.integer :type
+      t.integer :typ
       t.string :name
 
       t.timestamps
