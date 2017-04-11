@@ -13,7 +13,7 @@ The zoo requests a web platform where they can **upload images of animals**, and
 - Clone this repo
 - Set up a local MySQL (MariaDB) installation with user/pw: root/password
 - `cd proj_dir`, `bundle`, `rake db:create`, `rake db:migrate`
-- `rails server` starts the server, running at [localhost](http://127.0.0.1:3000/)
+- `rails server` starts the server, running at [localhost](http://127.0.0.1:3000/albums)
 
 ### Deploy to Heroku
 
