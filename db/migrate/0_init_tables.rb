@@ -13,8 +13,8 @@ class InitTables < ActiveRecord::Migration[5.0]
   def change
     create_table "animal".pluralize.to_sym, id: false do |t|
       t.bigint :id
-      t.bigint :habitat
-      t.bigint :food
+      t.string :habitat
+      t.string :food
       t.string :name
       t.string :detail
 

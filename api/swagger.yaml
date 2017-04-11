@@ -200,12 +200,10 @@ definitions:
         format: "int32"
         description: "ID of an animal"
       habitat:
-        type: "integer"
-        format: "int32"
+        type: "string"
         description: "Habitat"
       food:
-        type: "integer"
-        format: "int32"
+        type: "string"
         description: "Food preference"
       name:
         type: "string"

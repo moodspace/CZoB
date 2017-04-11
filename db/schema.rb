@@ -13,8 +13,8 @@
 ActiveRecord::Schema.define(version: 0) do
 
   create_table "animals", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.bigint "habitat"
-    t.bigint "food"
+    t.string "habitat"
+    t.string "food"
     t.string "name"
     t.string "detail"
     t.datetime "created_at", null: false
