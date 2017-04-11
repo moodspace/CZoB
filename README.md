@@ -20,7 +20,7 @@ The zoo requests a web platform where they can **upload images of animals**, and
 - Create a new app
 - Create a new pipeline and link it with this repo
 - Add a MySQL addon, e.g. [JawsDB](https://devcenter.heroku.com/articles/jawsdb)
-- Change config variables `DB_HOST`, `DB_NAME`, `DB_PASS`, `DB_USER`, `RACK_ENV`, `RAILS_ENV`
+- Change config variables `DB_HOST`, `DB_NAME`, `DB_PASS`, `DB_USER`, `RACK_ENV=production`, `RAILS_ENV=production`
 - In Heroku CLI, run `rake db:create`, `rake db:migrate`
 - Deploy
 
